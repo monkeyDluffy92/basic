@@ -1,0 +1,36 @@
+{
+  "name": "smartsync",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "electron .",
+    "build:mac": "vite build && electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.smartsync.app",
+    "productName": "SmartSync",
+    "copyright": "Made with passion by Aamir Alsufi",
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon_mac.png"
+    },
+    "directories": {
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^42.3.3",
+    "electron-builder": "^26.15.2",
+    "vite": "^5.4.1"
+  }
+}
